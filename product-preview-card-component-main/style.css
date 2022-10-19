@@ -11,6 +11,8 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: hsl(30, 38%, 92%);
   font-size: 14px;
+}
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,19 +20,16 @@ body {
 .card {
   margin: 100px;
   padding: 0 15px;
-  width: 50%;
+  max-width: 45%;
 }
 .side {
   max-height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  /* overflow: hidden; */
-  width: 600;
 }
 .card-content {
-  padding: 30px 12px;
+  padding: 30px;
   max-width: 65%;
   display: flex;
   flex-direction: column;
@@ -55,21 +54,21 @@ body {
   color: hsl(228, 12%, 48%);
   line-height: 20px;
 }
-.amount {
+.price {
   display: flex;
   justify-content: center;
   justify-content: space-between;
   max-width: 40%;
   align-items: center;
 }
-.present-amount {
+.present-price {
   color: hsl(158, 36%, 37%);
   font-family: "Fraunces", serif;
   font-size: 25px;
   text-align: left;
   font-weight: 500px;
 }
-.previous-amount {
+.previous-price {
   color: hsl(228, 12%, 48%);
   padding-left: 15px;
   font-weight: 200;
@@ -79,7 +78,7 @@ body {
   padding: 13px 0;
   border-radius: 10px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700px;
   cursor: pointer;
   width: 225px;
@@ -98,52 +97,49 @@ img {
 }
 
 @media only screen and (max-width: 480px) {
-  * {
-    padding: 25;
-    margin: 30;
-  }
-  body {
-    background-color: hsl(30, 38%, 92%);
-    width: 400px;
-  }
   .image1 {
     display: none;
   }
   .image2 {
     display: block;
-    width: 400px;
-    height: 175px;
+    max-width: 100%;
+    height: auto;
+  }
+  img {
+    border-radius: 10px 10px 0 0;
   }
   .card {
-    margin: 10px 0;
-    padding: 15px;
-    width: 280px;
-    height: 510px;
+    margin: 10px auto;
+    padding: 0;
+    max-width: 90%;
   }
   .side {
-    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 550px;
   }
   .card-content {
-    padding: 15px;
+    padding: 25px 5px;
     font-size: 10px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    max-width: 85%;
   }
-  .cart {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
+
+  .previous-price {
+    margin: 18px 0 14px 0;
   }
   .product {
+    padding: 16px 0;
     font-size: 30px;
     color: hsl(212, 21%, 14%);
+  }
+  .cart {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart img {
+    padding-right: 8px;
   }
 }
